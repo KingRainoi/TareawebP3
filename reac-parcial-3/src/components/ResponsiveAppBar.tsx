@@ -16,8 +16,6 @@ import { useState, MouseEvent } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../css/NavBar.css';
 
-// const pages = ['Products', 'Pricing', 'Blog'];
-
 const pages = [
   {
     name: 'Home',
@@ -42,6 +40,7 @@ const pages = [
 ];
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -178,7 +177,8 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  {setting !="Logout" && <Typography textAlign="center">{setting}</Typography> }
+                  {setting =="Logout" && <NavLink to={'/login-register'} className="nav-link">{setting}</NavLink> }
                 </MenuItem>
               ))}
             </Menu>

@@ -15,7 +15,9 @@
 body {
     background-color: #191E29;
 }
-
+.userDetails_title {
+    color: #191E29;
+}
 label {
     color: white;
 }

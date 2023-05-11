@@ -12,6 +12,8 @@ import About from './screens/About.tsx';
 import TermsAndConditions from './screens/TermsAndConditions.tsx';
 import UsersScreen from './screens/UsersScreen.tsx';
 import UsersDetailsScreen from './screens/UsersDetailsScreen.tsx';
+import LoginRegisterForm from './screens/LoginResgisterForm.tsx';
+import CreateUser from './screens/CreateUser.tsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +26,8 @@ root.render(
         <Route path='/UsersDetailsScreen/:id' element={<UsersDetailsScreen/>} />
         <Route path='/about/:id' element={<About/>} />
         <Route path='/terms-and-conditions' element={<TermsAndConditions/>} />
+        <Route path='/login-register' element={<LoginRegisterForm/>} />
+        <Route path='/create-user' element={<CreateUser/>} />
       </Routes>
     </Router>
     {/* <NavBar/> */}
